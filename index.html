@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eric Sun · MechE &amp; CS · Stanford</title>
+    <meta
+      name="description"
+      content="Eric Sun — Mechanical Engineering & Computer Science at Stanford. Space systems, embedded systems, research, and photography."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__brand" href="#">Eric Sun</a>
+        <button
+          type="button"
+          class="nav__toggle"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          aria-label="Open menu"
+        >
+          <span class="nav__toggle-bar" aria-hidden="true"></span>
+          <span class="nav__toggle-bar" aria-hidden="true"></span>
+        </button>
+        <ul id="nav-menu" class="nav__links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#media">Photos &amp; video</a></li>
+          <li>
+            <a
+              class="nav__cta"
+              href="https://www.linkedin.com/in/ericyrsun"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__bg" aria-hidden="true"></div>
+        <div class="hero__inner container">
+          <p class="hero__eyebrow">Stanford · Mechanical Engineering &amp; Computer Science</p>
+          <h1 id="hero-title" class="hero__title">Eric Sun</h1>
+          <p class="hero__tagline">
+            Engineer. Tinkerer. Photographer. Building spacecraft structures, teaching code, and
+            shipping hardware that thinks at the edge.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#projects">See work</a>
+            <a class="btn btn--ghost" href="#media">Media gallery</a>
+          </div>
+          <ul class="hero__meta">
+            <li>Stanford Student Space Initiative</li>
+            <li>CS106A/B Section Leader</li>
+            <li>Stanford, CA</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="about" class="section section--alt" aria-labelledby="about-title">
+        <div class="container narrow">
+          <h2 id="about-title" class="section__title">About</h2>
+          <p class="lead">
+            I work across mechanical design, embedded systems, and software— from satellite
+            structures headed to orbit to autonomous systems that sense, decide, and act locally.
+            I also care about how engineering shows up in images: I have shot and exhibited
+            large-format campus work for Stanford Bioengineering.
+          </p>
+        </div>
+      </section>
+
+      <section id="experience" class="section" aria-labelledby="exp-title">
+        <div class="container">
+          <h2 id="exp-title" class="section__title">Experience</h2>
+          <ol class="timeline">
+            <li class="timeline__item">
+              <div class="timeline__marker" aria-hidden="true"></div>
+              <article class="card">
+                <header class="card__head">
+                  <h3 class="card__title">Satellite Structures &amp; Mechanical Team Lead</h3>
+                  <p class="card__org">Stanford Student Space Initiative</p>
+                  <p class="card__meta">Mar 2026 – Present · Part-time · On-site</p>
+                </header>
+                <p class="card__body">
+                  Leading structures for spacecraft hardware. Continuing work on
+                  <strong>SAMWISE</strong>, a CubeSat targeting launch
+                  <time datetime="2026-07">July 2026</time> on a SpaceX Transporter mission from
+                  Vandenberg.
+                </p>
+              </article>
+            </li>
+            <li class="timeline__item">
+              <div class="timeline__marker" aria-hidden="true"></div>
+              <article class="card">
+                <header class="card__head">
+                  <h3 class="card__title">Satellite Structures Engineer</h3>
+                  <p class="card__org">Stanford Student Space Initiative</p>
+                  <p class="card__meta">Oct 2024 – Present · Part-time · On-site</p>
+                </header>
+                <p class="card__body">
+                  Hands-on aerospace manufacturing and structural design for CubeSat assemblies;
+                  collaboration across disciplines for launch readiness.
+                </p>
+              </article>
+            </li>
+            <li class="timeline__item">
+              <div class="timeline__marker" aria-hidden="true"></div>
+              <article class="card">
+                <header class="card__head">
+                  <h3 class="card__title">CS Course Teaching Assistant</h3>
+                  <p class="card__org">Stanford Computer Science</p>
+                  <p class="card__meta">Jan 2026 – Present · Part-time · On-site</p>
+                </header>
+                <p class="card__body">
+                  Section leader for <strong>CS106A</strong> (Programming Methodology) and
+                  <strong>CS106B</strong> (Programming Abstractions).
+                </p>
+              </article>
+            </li>
+            <li class="timeline__item">
+              <div class="timeline__marker" aria-hidden="true"></div>
+              <article class="card">
+                <header class="card__head">
+                  <h3 class="card__title">Materials Science Researcher</h3>
+                  <p class="card__org">Dionne Lab, Stanford School of Engineering</p>
+                  <p class="card__meta">Apr 2025 – Dec 2025 · Part-time · On-site</p>
+                </header>
+                <p class="card__body">
+                  Nano-scale optical biosensors. Completed a paid summer research internship as
+                  part of the MatSci REU program.
+                </p>
+              </article>
+            </li>
+            <li class="timeline__item">
+              <div class="timeline__marker" aria-hidden="true"></div>
+              <article class="card">
+                <header class="card__head">
+                  <h3 class="card__title">Department Photographer</h3>
+                  <p class="card__org">Stanford Bioengineering</p>
+                  <p class="card__meta">Jun 2023 – Aug 2023 · Part-time</p>
+                </header>
+                <p class="card__body">
+                  Official photographer for department events; commissioned series of 20 large-scale
+                  photographic works exhibited in BioE offices.
+                </p>
+              </article>
+            </li>
+            <li class="timeline__item">
+              <div class="timeline__marker" aria-hidden="true"></div>
+              <article class="card">
+                <header class="card__head">
+                  <h3 class="card__title">Summer Research Intern</h3>
+                  <p class="card__org">Chemical Engineering — Bao Group (Prof. Zhenan Bao)</p>
+                  <p class="card__meta">Jun 2023 – Aug 2023 · Internship</p>
+                </header>
+                <p class="card__body">
+                  Self-healing, pressure-sensing artificial skin for surgical simulation training,
+                  mentored by Sam E. Root. Contributed to work published in
+                  <em>Device</em> (Cell Press).
+                </p>
+              </article>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="projects" class="section section--alt" aria-labelledby="proj-title">
+        <div class="container">
+          <h2 id="proj-title" class="section__title">Featured project</h2>
+          <div class="project-feature">
+            <div class="project-feature__media">
+              <!-- Replace src with your image: e.g. assets/images/sprout-hero.jpg -->
+              <figure class="media-frame media-frame--hero">
+                <!-- Swap data URI for your file: src="assets/images/sprout-hero.jpg" -->
+                <img
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 750'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%2312151c'/%3E%3Cstop offset='1' stop-color='%23181c26'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23g)' width='1200' height='750'/%3E%3Ctext x='50%25' y='48%25' dominant-baseline='middle' text-anchor='middle' fill='%239aa3b2' font-family='system-ui,sans-serif' font-size='32'%3EHero photo · Sprout%3C/text%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' fill='%23647585' font-family='system-ui,sans-serif' font-size='18'%3EReplace src in index.html%3C/text%3E%3C/svg%3E"
+                  alt=""
+                  width="1200"
+                  height="750"
+                  class="media-frame__img is-placeholder"
+                />
+                <figcaption class="media-frame__caption">
+                  Add a hero photo of Sprout (2×2 ft microfarm + gantry). Point
+                  <code>src</code> at a file under <code>assets/images/</code>.
+                </figcaption>
+              </figure>
+            </div>
+            <div class="project-feature__text">
+              <p class="eyebrow">TreeHacks · NVIDIA Edge AI Track — Winner</p>
+              <h3 class="project-feature__title">Sprout</h3>
+              <p>
+                Autonomous robotic microfarm: soil moisture, pressure, and air-quality sensing;
+                camera and water line on a custom 2-axis gantry; scanning and planning on an NVIDIA
+                Jetson Nano with <strong>local</strong> edge inference for per-plant watering
+                decisions. I led mechanical engineering—printed parts, sheet metal, riveted frames—on
+                a hackathon timeline.
+              </p>
+              <ul class="link-list">
+                <li>
+                  <a href="https://lnkd.in/g3hcQhUb" target="_blank" rel="noopener noreferrer"
+                    >Devpost</a
+                  >
+                </li>
+                <li>
+                  <a href="https://lnkd.in/gqggVeYb" target="_blank" rel="noopener noreferrer"
+                    >YouTube demo</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="section" aria-labelledby="edu-title">
+        <div class="container">
+          <h2 id="edu-title" class="section__title">Education &amp; credentials</h2>
+          <div class="grid-2">
+            <div>
+              <h3 class="subsection-title">Stanford University</h3>
+              <ul class="plain-list">
+                <li>
+                  <strong>B.S. Computer Science</strong>
+                  <span class="muted"> · Sep 2024 – Jun 2028</span>
+                </li>
+                <li>
+                  <strong>B.S. Mechanical Engineering</strong>
+                  <span class="muted"> · Sep 2024 – Jun 2028</span>
+                </li>
+              </ul>
+              <h3 class="subsection-title">Certifications</h3>
+              <ul class="plain-list">
+                <li>FAA TRUST (Recreational UAS) · Jul 2023</li>
+                <li>AWS — Generative AI with Diffusion Models · Aug 2025</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="subsection-title">Volunteering</h3>
+              <ul class="plain-list">
+                <li>
+                  <strong>Data validation volunteer</strong>, One Degree, Inc. · Apr 2022 – Oct
+                  2022
+                </li>
+                <li>
+                  <strong>Peer tutor</strong>, Palo Alto High School · Oct 2021 – Jun 2022 · Geometry
+                  through Biology
+                </li>
+              </ul>
+              <h3 class="subsection-title">Skills</h3>
+              <p class="chips" aria-label="Skill tags">
+                <span class="chip">Machine learning</span>
+                <span class="chip">Generative AI</span>
+                <span class="chip">Aerospace manufacturing</span>
+                <span class="chip">Structures &amp; mechanisms</span>
+                <span class="chip">Photography</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="media" class="section section--alt" aria-labelledby="media-title">
+        <div class="container">
+          <h2 id="media-title" class="section__title">Photos &amp; video</h2>
+          <p class="section__intro">
+            Slots below are ready for your assets. Drop files into <code>assets/images/</code> and
+            update the <code>src</code> attributes, or swap in <code>&lt;video&gt;</code> /
+            embedded players where noted.
+          </p>
+
+          <div class="media-grid" role="list">
+            <figure class="media-tile" role="listitem">
+              <div class="media-tile__frame">
+                <!-- Photo slot 1: replace src -->
+                <img
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Crect fill='%2312151c' width='800' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%239aa3b2' font-family='system-ui,sans-serif' font-size='24'%3EPhoto 1%3C/text%3E%3C/svg%3E"
+                  alt=""
+                  width="800"
+                  height="600"
+                  class="media-tile__img is-placeholder"
+                />
+              </div>
+              <figcaption class="media-tile__cap">
+                <strong>Photo slot 1</strong> — e.g. SSI / SAMWISE structure, lab, or machining.
+              </figcaption>
+            </figure>
+
+            <figure class="media-tile" role="listitem">
+              <div class="media-tile__frame">
+                <img
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Crect fill='%2312151c' width='800' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%239aa3b2' font-family='system-ui,sans-serif' font-size='24'%3EPhoto 2%3C/text%3E%3C/svg%3E"
+                  alt=""
+                  width="800"
+                  height="600"
+                  class="media-tile__img is-placeholder"
+                />
+              </div>
+              <figcaption class="media-tile__cap">
+                <strong>Photo slot 2</strong> — team, integration, or field shots.
+              </figcaption>
+            </figure>
+
+            <figure class="media-tile" role="listitem">
+              <div class="media-tile__frame">
+                <img
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Crect fill='%2312151c' width='800' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%239aa3b2' font-family='system-ui,sans-serif' font-size='24'%3EPhoto 3%3C/text%3E%3C/svg%3E"
+                  alt=""
+                  width="800"
+                  height="600"
+                  class="media-tile__img is-placeholder"
+                />
+              </div>
+              <figcaption class="media-tile__cap">
+                <strong>Photo slot 3</strong> — photography / campus series pick.
+              </figcaption>
+            </figure>
+
+            <figure class="media-tile media-tile--video" role="listitem">
+              <div class="media-tile__frame media-tile__frame--video">
+                <!-- Option A: local file (uncomment and set src)
+                <video class="media-tile__video" controls playsinline preload="metadata" poster="assets/images/video-poster.jpg">
+                  <source src="assets/video/clips/demo.mp4" type="video/mp4" />
+                </video>
+                -->
+                <!-- Option B: YouTube embed — replace VIDEO_ID -->
+                <div class="embed embed--16x9">
+                  <iframe
+                    class="embed__iframe"
+                    data-placeholder="true"
+                    title="Project demo video (replace embed)"
+                    loading="lazy"
+                    src="about:blank"
+                    data-src="https://www.youtube-nocookie.com/embed/VIDEO_ID"
+                  ></iframe>
+                </div>
+                <p class="embed-hint">
+                  Replace <code>VIDEO_ID</code> in <code>index.html</code> and set the iframe
+                  <code>src</code> to your YouTube embed URL, or uncomment the
+                  <code>&lt;video&gt;</code> block for a local file in <code>assets/video/</code>.
+                </p>
+              </div>
+              <figcaption class="media-tile__cap">
+                <strong>Video slot</strong> — Sprout demo, SSI recap, or research clip.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer__inner">
+        <p class="footer__name">Eric Sun</p>
+        <p class="footer__fine">MechE &amp; CS @ Stanford · He/Him</p>
+        <ul class="footer__links">
+          <li>
+            <a href="https://www.linkedin.com/in/ericyrsun" target="_blank" rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </li>
+        </ul>
+        <p class="footer__copy">&copy; <span id="year"></span></p>
+      </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
