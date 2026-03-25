@@ -133,7 +133,8 @@ code {
 
 .art-gallery__wrap {
   position: relative;
-  width: 100%;
+  width: min(100% - 2.5rem, var(--max));
+  margin-inline: auto;
 }
 
 .art-gallery__viewport {
@@ -145,7 +146,8 @@ code {
   gap: 0;
   -webkit-overflow-scrolling: touch;
   outline: none;
-  border-block: 1px solid var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
   background: #050608;
 }
 
@@ -927,19 +929,6 @@ code {
   border-top: 1px solid var(--line);
 }
 
-/* Education grid */
-.grid-2 {
-  display: grid;
-  gap: 2rem;
-}
-
-@media (min-width: 768px) {
-  .grid-2 {
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-  }
-}
-
 .plain-list {
   margin: 0;
   padding-left: 1.1rem;
@@ -948,24 +937,6 @@ code {
 
 .plain-list li {
   margin-bottom: 0.5rem;
-}
-
-.chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 0;
-}
-
-.chip {
-  display: inline-block;
-  padding: 0.35rem 0.75rem;
-  border-radius: 999px;
-  font-size: 0.8125rem;
-  font-weight: 500;
-  background: var(--warm-dim);
-  color: #e8c9a8;
-  border: 1px solid rgba(212, 165, 116, 0.25);
 }
 
 .embed {
