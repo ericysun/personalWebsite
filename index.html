@@ -380,6 +380,102 @@
 
             <article class="project-feature project-feature--reverse">
               <div class="project-feature__media">
+                <div class="project-media-gallery" data-project-gallery>
+                  <div class="project-media-gallery__wrap">
+                    <button
+                      type="button"
+                      class="project-media-gallery__btn project-media-gallery__btn--prev"
+                      aria-label="Previous slide"
+                      aria-controls="project-gallery-trailcam"
+                    >
+                      <span aria-hidden="true">‹</span>
+                    </button>
+                    <div
+                      id="project-gallery-trailcam"
+                      class="project-media-gallery__viewport"
+                      tabindex="0"
+                      role="group"
+                      aria-label="Frontier TrailCam photos"
+                    >
+                      <figure class="project-media-gallery__slide">
+                        <div class="project-media-gallery__visual">
+                          <img
+                            src="assets/images/frontierTrailcam.png"
+                            alt="Frontier TrailCam assembled portable timelapse camera"
+                            width="1200"
+                            height="750"
+                            class="project-media-gallery__img"
+                          />
+                        </div>
+                        <figcaption class="project-media-gallery__cap">
+                          Frontier TrailCam assembled and ready for deployment.
+                        </figcaption>
+                      </figure>
+                      <figure class="project-media-gallery__slide">
+                        <div class="project-media-gallery__visual">
+                          <img
+                            src="assets/images/frontierTrailCamOpenView.png"
+                            alt="Frontier TrailCam open view showing internal components"
+                            width="1200"
+                            height="750"
+                            class="project-media-gallery__img"
+                          />
+                        </div>
+                        <figcaption class="project-media-gallery__cap">
+                          Open view with ESP32-CAM, RTC, battery pack, and storage hardware.
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <button
+                      type="button"
+                      class="project-media-gallery__btn project-media-gallery__btn--next"
+                      aria-label="Next slide"
+                      aria-controls="project-gallery-trailcam"
+                    >
+                      <span aria-hidden="true">›</span>
+                    </button>
+                  </div>
+                  <div class="project-media-gallery__dots" role="tablist" aria-label="TrailCam photos">
+                    <button
+                      type="button"
+                      class="project-media-gallery__dot is-active"
+                      aria-label="Show assembled camera photo"
+                      aria-current="true"
+                    ></button>
+                    <button
+                      type="button"
+                      class="project-media-gallery__dot"
+                      aria-label="Show internal hardware photo"
+                    ></button>
+                  </div>
+                </div>
+              </div>
+              <div class="project-feature__text">
+                <p class="eyebrow">Embedded systems · Open-source hardware</p>
+                <h3 class="project-feature__title">Frontier TrailCam</h3>
+                <p>
+                  A compact, portable timelapse camera built on ESP32-CAM firmware with two startup
+                  modes: configuration over a built-in web server (live stream, camera tuning, and
+                  capture schedule controls) or autonomous photo capture using saved settings. Between
+                  captures, the system enters deep sleep while a DS3231 RTC tracks wake time for low
+                  power operation. Images save to a FAT32 microSD card, and the unit runs on dual
+                  18650 batteries for field deployment.
+                </p>
+                <ul class="link-list">
+                  <li>
+                    <a
+                      href="https://github.com/ericysun/FrontierTrailCam"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >GitHub</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-feature project-feature--reverse">
+              <div class="project-feature__media">
                 <figure class="media-frame media-frame--hero">
                   <img
                     src="assets/images/satellite.JPG"
