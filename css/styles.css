@@ -27,6 +27,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + 16px);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -702,16 +703,16 @@ code {
 
 @media (min-width: 900px) {
   .project-feature {
-    grid-template-columns: 1.1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
     gap: 3rem;
   }
 
-  .project-feature--reverse .project-feature__media {
-    order: 2;
+  .project-feature__text {
+    order: 1;
   }
 
-  .project-feature--reverse .project-feature__text {
-    order: 1;
+  .project-feature__media {
+    order: 2;
   }
 }
 
