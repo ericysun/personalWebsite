@@ -8,6 +8,9 @@
       name="description"
       content="Eric Sun — Mechanical Engineering & Computer Science at Stanford. Space systems, embedded systems, research, and photography."
     />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -37,7 +40,6 @@
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#education">Education</a></li>
-          <li><a href="#media">Photos &amp; video</a></li>
         </ul>
       </nav>
     </header>
@@ -124,7 +126,7 @@
               />
               <figcaption class="art-gallery__caption">
                 <span class="art-gallery__cap-title">Phone stand</span>
-                <span class="art-gallery__cap-desc">Mechanical build · watch on YouTube below</span>
+                <span class="art-gallery__cap-desc">Mechanical build · demo in Projects</span>
               </figcaption>
             </figure>
           </div>
@@ -155,7 +157,7 @@
           </p>
           <div class="hero__actions">
             <a class="btn btn--primary" href="#projects">See work</a>
-            <a class="btn btn--ghost" href="#media">Media gallery</a>
+            <a class="btn btn--ghost" href="#art-gallery">Gallery</a>
           </div>
           <ul class="hero__meta">
             <li>Stanford Student Space Initiative</li>
@@ -191,7 +193,7 @@
                 </header>
                 <p class="card__body">
                   Leading structures for spacecraft hardware. Continuing work on
-                  <strong>SAMWISE</strong>, a CubeSat targeting launch
+                  SAMWISE, a CubeSat targeting launch
                   <time datetime="2026-07">July 2026</time> on a SpaceX Transporter mission from
                   Vandenberg.
                 </p>
@@ -220,8 +222,8 @@
                   <p class="card__meta">Jan 2026 – Present · Part-time · On-site</p>
                 </header>
                 <p class="card__body">
-                  Section leader for <strong>CS106A</strong> (Programming Methodology) and
-                  <strong>CS106B</strong> (Programming Abstractions).
+                  Section leader for CS106A (Programming Methodology) and CS106B (Programming
+                  Abstractions).
                 </p>
               </article>
             </li>
@@ -274,45 +276,241 @@
 
       <section id="projects" class="section section--alt" aria-labelledby="proj-title">
         <div class="container">
-          <h2 id="proj-title" class="section__title">Featured project</h2>
-          <div class="project-feature">
-            <div class="project-feature__media">
-              <figure class="media-frame media-frame--hero">
-                <img
-                  src="assets/images/sprout.JPG"
-                  alt="Sprout 2×2 ft robotic microfarm with gantry, sensors, and grow bed"
-                  width="1200"
-                  height="750"
-                  class="media-frame__img"
-                />
-                <figcaption class="media-frame__caption">
-                  Sprout at TreeHacks — gantry, sensing, and on-device inference on Jetson Nano.
-                </figcaption>
-              </figure>
-            </div>
-            <div class="project-feature__text">
-              <p class="eyebrow">TreeHacks · NVIDIA Edge AI Track — Winner</p>
-              <h3 class="project-feature__title">Sprout</h3>
-              <p>
-                Autonomous robotic microfarm: soil moisture, pressure, and air-quality sensing;
-                camera and water line on a custom 2-axis gantry; scanning and planning on an NVIDIA
-                Jetson Nano with <strong>local</strong> edge inference for per-plant watering
-                decisions. I led mechanical engineering—printed parts, sheet metal, riveted frames—on
-                a hackathon timeline.
-              </p>
-              <ul class="link-list">
-                <li>
-                  <a href="https://lnkd.in/g3hcQhUb" target="_blank" rel="noopener noreferrer"
-                    >Devpost</a
-                  >
-                </li>
-                <li>
-                  <a href="https://youtu.be/PbnM8TVgxBQ" target="_blank" rel="noopener noreferrer"
-                    >YouTube demo</a
-                  >
-                </li>
-              </ul>
-            </div>
+          <h2 id="proj-title" class="section__title">Projects</h2>
+          <div class="projects-stack">
+            <article class="project-feature">
+              <div class="project-feature__media">
+                <div class="project-media-gallery" data-project-gallery>
+                  <div class="project-media-gallery__wrap">
+                    <button
+                      type="button"
+                      class="project-media-gallery__btn project-media-gallery__btn--prev"
+                      aria-label="Previous slide"
+                      aria-controls="project-gallery-sprout"
+                    >
+                      <span aria-hidden="true">‹</span>
+                    </button>
+                    <div
+                      id="project-gallery-sprout"
+                      class="project-media-gallery__viewport"
+                      tabindex="0"
+                      role="group"
+                      aria-label="Sprout build photo and YouTube demo"
+                    >
+                    <figure class="project-media-gallery__slide">
+                      <div class="project-media-gallery__visual">
+                        <img
+                          src="assets/images/sprout.JPG"
+                          alt="Sprout 2×2 ft robotic microfarm with gantry, sensors, and grow bed"
+                          width="1200"
+                          height="750"
+                          class="project-media-gallery__img"
+                        />
+                      </div>
+                      <figcaption class="project-media-gallery__cap">
+                        Sprout at TreeHacks — gantry, sensing, and on-device inference on Jetson Nano.
+                      </figcaption>
+                    </figure>
+                    <figure class="project-media-gallery__slide">
+                      <div class="project-media-gallery__visual project-media-gallery__visual--video">
+                        <div class="embed embed--16x9">
+                          <iframe
+                            class="embed__iframe"
+                            title="Sprout — YouTube demo"
+                            loading="lazy"
+                            src="https://www.youtube-nocookie.com/embed/PbnM8TVgxBQ"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen
+                          ></iframe>
+                        </div>
+                      </div>
+                      <figcaption class="project-media-gallery__cap">
+                        Demo video —
+                        <a href="https://youtu.be/PbnM8TVgxBQ" target="_blank" rel="noopener noreferrer"
+                          >open on YouTube</a
+                        >
+                      </figcaption>
+                    </figure>
+                    </div>
+                    <button
+                      type="button"
+                      class="project-media-gallery__btn project-media-gallery__btn--next"
+                      aria-label="Next slide"
+                      aria-controls="project-gallery-sprout"
+                    >
+                      <span aria-hidden="true">›</span>
+                    </button>
+                  </div>
+                  <div class="project-media-gallery__dots" role="tablist" aria-label="Photo or video">
+                    <button
+                      type="button"
+                      class="project-media-gallery__dot is-active"
+                      aria-label="Show build photo"
+                      aria-current="true"
+                    ></button>
+                    <button
+                      type="button"
+                      class="project-media-gallery__dot"
+                      aria-label="Show YouTube demo"
+                    ></button>
+                  </div>
+                </div>
+              </div>
+              <div class="project-feature__text">
+                <p class="eyebrow">TreeHacks · NVIDIA Edge AI Track — Winner</p>
+                <h3 class="project-feature__title">Sprout</h3>
+                <p>
+                  Autonomous robotic microfarm: soil moisture, pressure, and air-quality sensing;
+                  camera and water line on a custom 2-axis gantry; scanning and planning on an NVIDIA
+                  Jetson Nano with local edge inference for per-plant watering decisions. I led
+                  mechanical engineering—printed parts, sheet metal, riveted frames—on a hackathon
+                  timeline.
+                </p>
+                <ul class="link-list">
+                  <li>
+                    <a href="https://lnkd.in/g3hcQhUb" target="_blank" rel="noopener noreferrer"
+                      >Devpost</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://youtu.be/PbnM8TVgxBQ" target="_blank" rel="noopener noreferrer"
+                      >YouTube demo</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-feature project-feature--reverse">
+              <div class="project-feature__media">
+                <figure class="media-frame media-frame--hero">
+                  <img
+                    src="assets/images/satellite.JPG"
+                    alt="CubeSat satellite structure and hardware on a work surface"
+                    width="1200"
+                    height="750"
+                    class="media-frame__img"
+                  />
+                  <figcaption class="media-frame__caption">
+                    SAMWISE — structures, integration, and launch prep with Stanford SSI.
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="project-feature__text">
+                <p class="eyebrow">Stanford Student Space Initiative</p>
+                <h3 class="project-feature__title">SAMWISE CubeSat</h3>
+                <p>
+                  Satellite structures and mechanical integration for SAMWISE, a CubeSat targeting
+                  launch in July 2026 aboard a SpaceX Transporter mission from Vandenberg Space Force
+                  Base. Work spans aerospace manufacturing, structural design, and cross-disciplinary
+                  collaboration for launch readiness.
+                </p>
+                <ul class="link-list">
+                  <li>
+                    <a href="https://stanfordssi.org/" target="_blank" rel="noopener noreferrer"
+                      >Stanford SSI</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-feature">
+              <div class="project-feature__media">
+                <div class="project-media-gallery" data-project-gallery>
+                  <div class="project-media-gallery__wrap">
+                    <button
+                      type="button"
+                      class="project-media-gallery__btn project-media-gallery__btn--prev"
+                      aria-label="Previous slide"
+                      aria-controls="project-gallery-phone"
+                    >
+                      <span aria-hidden="true">‹</span>
+                    </button>
+                    <div
+                      id="project-gallery-phone"
+                      class="project-media-gallery__viewport"
+                      tabindex="0"
+                      role="group"
+                      aria-label="Phone stand photo and YouTube demo"
+                    >
+                      <figure class="project-media-gallery__slide">
+                        <div class="project-media-gallery__visual">
+                          <img
+                            src="assets/images/phoneStand.png"
+                            alt="Phone stand mechanical build"
+                            width="1200"
+                            height="750"
+                            class="project-media-gallery__img"
+                          />
+                        </div>
+                        <figcaption class="project-media-gallery__cap">
+                          Phone stand — fabrication and finish.
+                        </figcaption>
+                      </figure>
+                      <figure class="project-media-gallery__slide">
+                        <div class="project-media-gallery__visual project-media-gallery__visual--video">
+                          <div class="embed embed--16x9">
+                            <iframe
+                              class="embed__iframe"
+                              title="Phone stand project — YouTube"
+                              loading="lazy"
+                              src="https://www.youtube-nocookie.com/embed/y3Ab7_Pmc3M"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                              referrerpolicy="strict-origin-when-cross-origin"
+                              allowfullscreen
+                            ></iframe>
+                          </div>
+                        </div>
+                        <figcaption class="project-media-gallery__cap">
+                          Demo video —
+                          <a href="https://youtu.be/y3Ab7_Pmc3M" target="_blank" rel="noopener noreferrer"
+                            >open on YouTube</a
+                          >
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <button
+                      type="button"
+                      class="project-media-gallery__btn project-media-gallery__btn--next"
+                      aria-label="Next slide"
+                      aria-controls="project-gallery-phone"
+                    >
+                      <span aria-hidden="true">›</span>
+                    </button>
+                  </div>
+                  <div class="project-media-gallery__dots" role="tablist" aria-label="Photo or video">
+                    <button
+                      type="button"
+                      class="project-media-gallery__dot is-active"
+                      aria-label="Show build photo"
+                      aria-current="true"
+                    ></button>
+                    <button
+                      type="button"
+                      class="project-media-gallery__dot"
+                      aria-label="Show YouTube demo"
+                    ></button>
+                  </div>
+                </div>
+              </div>
+              <div class="project-feature__text">
+                <p class="eyebrow">Mechanical design · Fabrication</p>
+                <h3 class="project-feature__title">Phone stand</h3>
+                <p>
+                  A compact stand built through machining, fitting, and assembly—focused on clean
+                  mechanics and a stable platform for daily use.
+                </p>
+                <ul class="link-list">
+                  <li>
+                    <a href="https://youtu.be/y3Ab7_Pmc3M" target="_blank" rel="noopener noreferrer"
+                      >YouTube</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -325,12 +523,10 @@
               <h3 class="subsection-title">Stanford University</h3>
               <ul class="plain-list">
                 <li>
-                  <strong>B.S. Computer Science</strong>
-                  <span class="muted"> · Sep 2024 – Jun 2028</span>
+                  B.S. Computer Science<span class="muted"> · Sep 2024 – Jun 2028</span>
                 </li>
                 <li>
-                  <strong>B.S. Mechanical Engineering</strong>
-                  <span class="muted"> · Sep 2024 – Jun 2028</span>
+                  B.S. Mechanical Engineering<span class="muted"> · Sep 2024 – Jun 2028</span>
                 </li>
               </ul>
               <h3 class="subsection-title">Certifications</h3>
@@ -340,17 +536,6 @@
               </ul>
             </div>
             <div>
-              <h3 class="subsection-title">Volunteering</h3>
-              <ul class="plain-list">
-                <li>
-                  <strong>Data validation volunteer</strong>, One Degree, Inc. · Apr 2022 – Oct
-                  2022
-                </li>
-                <li>
-                  <strong>Peer tutor</strong>, Palo Alto High School · Oct 2021 – Jun 2022 · Geometry
-                  through Biology
-                </li>
-              </ul>
               <h3 class="subsection-title">Skills</h3>
               <p class="chips" aria-label="Skill tags">
                 <span class="chip">Machine learning</span>
@@ -360,107 +545,6 @@
                 <span class="chip">Photography</span>
               </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="media" class="section section--alt" aria-labelledby="media-title">
-        <div class="container">
-          <h2 id="media-title" class="section__title">Photos &amp; video</h2>
-          <p class="section__intro">
-            Stills from the shop and orbit-bound hardware, plus YouTube demos for the phone stand and
-            Sprout.
-          </p>
-
-          <div class="media-grid" role="list">
-            <figure class="media-tile" role="listitem">
-              <div class="media-tile__frame">
-                <img
-                  src="assets/images/satellite.JPG"
-                  alt="Satellite structure and hardware on a work surface"
-                  width="800"
-                  height="600"
-                  class="media-tile__img"
-                />
-              </div>
-              <figcaption class="media-tile__cap">
-                <strong>Satellite</strong> — structures &amp; hardware
-              </figcaption>
-            </figure>
-
-            <figure class="media-tile" role="listitem">
-              <div class="media-tile__frame">
-                <img
-                  src="assets/images/toolboxAndHammer.JPG"
-                  alt="Toolbox and hammer on a workbench"
-                  width="800"
-                  height="600"
-                  class="media-tile__img"
-                />
-              </div>
-              <figcaption class="media-tile__cap">
-                <strong>Workbench</strong> — shop tools
-              </figcaption>
-            </figure>
-
-            <figure class="media-tile" role="listitem">
-              <div class="media-tile__frame">
-                <img
-                  src="assets/images/sprout.JPG"
-                  alt="Sprout autonomous microfarm"
-                  width="800"
-                  height="600"
-                  class="media-tile__img"
-                />
-              </div>
-              <figcaption class="media-tile__cap">
-                <strong>Sprout</strong> — microfarm build
-              </figcaption>
-            </figure>
-
-            <figure class="media-tile media-tile--video" role="listitem">
-              <div class="media-tile__frame media-tile__frame--video">
-                <div class="embed embed--16x9">
-                  <iframe
-                    class="embed__iframe"
-                    title="Phone stand project — YouTube"
-                    loading="lazy"
-                    src="https://www.youtube-nocookie.com/embed/y3Ab7_Pmc3M"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-              </div>
-              <figcaption class="media-tile__cap">
-                <strong>Phone stand</strong> —
-                <a href="https://youtu.be/y3Ab7_Pmc3M" target="_blank" rel="noopener noreferrer"
-                  >YouTube</a
-                >
-              </figcaption>
-            </figure>
-
-            <figure class="media-tile media-tile--video" role="listitem">
-              <div class="media-tile__frame media-tile__frame--video">
-                <div class="embed embed--16x9">
-                  <iframe
-                    class="embed__iframe"
-                    title="Sprout — Demo on YouTube"
-                    loading="lazy"
-                    src="https://www.youtube-nocookie.com/embed/PbnM8TVgxBQ"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-              </div>
-              <figcaption class="media-tile__cap">
-                <strong>Sprout demo</strong> —
-                <a href="https://youtu.be/PbnM8TVgxBQ" target="_blank" rel="noopener noreferrer"
-                  >YouTube</a
-                >
-              </figcaption>
-            </figure>
           </div>
         </div>
       </section>
