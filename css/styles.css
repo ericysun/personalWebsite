@@ -184,8 +184,8 @@ code {
 
 .art-gallery__img {
   width: 100%;
+  height: auto;
   aspect-ratio: 16 / 10;
-  max-height: min(72vh, 640px);
   object-fit: cover;
   object-position: center;
   flex-shrink: 0;
