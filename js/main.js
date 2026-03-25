@@ -20,24 +20,24 @@
     });
   }
 
-  const iframe = document.querySelector(".embed__iframe[data-src]");
-  if (iframe && iframe.dataset.src && !iframe.dataset.src.includes("VIDEO_ID")) {
-    iframe.src = iframe.dataset.src;
-    iframe.removeAttribute("data-placeholder");
-  }
-
   (function initArtGallery() {
     var viewport = document.getElementById("art-gallery-slides");
     var dotsRoot = document.getElementById("art-gallery-dots");
     var statusEl = document.getElementById("art-gallery-status");
     var prevBtn = document.querySelector(".art-gallery__btn--prev");
     var nextBtn = document.querySelector(".art-gallery__btn--next");
+    var gallerySection = document.getElementById("art-gallery");
     if (!viewport || !dotsRoot || !prevBtn || !nextBtn) return;
 
     var slides = viewport.querySelectorAll(".art-gallery__slide");
     if (!slides.length) return;
 
     var reduceMotionMq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    var AUTO_MS = 5500;
+    var RESUME_MS = 10000;
+    var autoInterval = null;
+    var resumeTimeout = null;
+    var hoverPaused = false;
 
     function smoothBehavior() {
       return reduceMotionMq.matches ? "auto" : "smooth";
@@ -64,6 +64,47 @@
       viewport.scrollTo({ left: i * w, behavior: behavior || smoothBehavior() });
     }
 
+    function clearAutoTimers() {
+      if (autoInterval !== null) {
+        clearInterval(autoInterval);
+        autoInterval = null;
+      }
+      if (resumeTimeout !== null) {
+        clearTimeout(resumeTimeout);
+        resumeTimeout = null;
+      }
+    }
+
+    function startAutoAdvance() {
+      clearAutoTimers();
+      if (reduceMotionMq.matches || slides.length <= 1 || hoverPaused) return;
+      autoInterval = window.setInterval(function () {
+        var idx = currentIndex();
+        var nextIdx = idx >= slides.length - 1 ? 0 : idx + 1;
+        goTo(nextIdx);
+      }, AUTO_MS);
+    }
+
+    function pauseAutoAdvance() {
+      if (autoInterval !== null) {
+        clearInterval(autoInterval);
+        autoInterval = null;
+      }
+    }
+
+    function scheduleResumeAuto() {
+      if (resumeTimeout !== null) clearTimeout(resumeTimeout);
+      resumeTimeout = window.setTimeout(function () {
+        resumeTimeout = null;
+        if (!hoverPaused && !document.hidden) startAutoAdvance();
+      }, RESUME_MS);
+    }
+
+    function onUserGalleryInteraction() {
+      pauseAutoAdvance();
+      scheduleResumeAuto();
+    }
+
     function buildDots() {
       dotsRoot.innerHTML = "";
       for (var i = 0; i < slides.length; i++) {
@@ -73,6 +114,7 @@
           btn.className = "art-gallery__dot";
           btn.setAttribute("aria-label", "Go to photo " + (idx + 1));
           btn.addEventListener("click", function () {
+            onUserGalleryInteraction();
             goTo(idx);
           });
           dotsRoot.appendChild(btn);
@@ -115,19 +157,62 @@
     );
 
     prevBtn.addEventListener("click", function () {
+      onUserGalleryInteraction();
       goTo(currentIndex() - 1);
     });
     nextBtn.addEventListener("click", function () {
+      onUserGalleryInteraction();
       goTo(currentIndex() + 1);
     });
 
     viewport.addEventListener("keydown", function (e) {
       if (e.key === "ArrowLeft") {
         e.preventDefault();
+        onUserGalleryInteraction();
         goTo(currentIndex() - 1);
       } else if (e.key === "ArrowRight") {
         e.preventDefault();
+        onUserGalleryInteraction();
         goTo(currentIndex() + 1);
+      }
+    });
+
+    viewport.addEventListener(
+      "pointerdown",
+      function () {
+        onUserGalleryInteraction();
+      },
+      { passive: true }
+    );
+
+    if (gallerySection) {
+      gallerySection.addEventListener("mouseenter", function () {
+        hoverPaused = true;
+        pauseAutoAdvance();
+      });
+      gallerySection.addEventListener("mouseleave", function () {
+        hoverPaused = false;
+        clearTimeout(resumeTimeout);
+        resumeTimeout = null;
+        startAutoAdvance();
+      });
+      gallerySection.addEventListener("focusin", function () {
+        onUserGalleryInteraction();
+      });
+    }
+
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden) {
+        pauseAutoAdvance();
+      } else if (!hoverPaused) {
+        startAutoAdvance();
+      }
+    });
+
+    reduceMotionMq.addEventListener("change", function () {
+      clearAutoTimers();
+      if (!reduceMotionMq.matches && !hoverPaused) {
+        startAutoAdvance();
       }
     });
 
@@ -143,5 +228,6 @@
 
     buildDots();
     updateChrome();
+    startAutoAdvance();
   })();
 })();
