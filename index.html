@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Eric Sun · MechE &amp; CS · Stanford</title>
+    <title>Eric Sun</title>
     <meta
       name="description"
       content="Eric Sun — Mechanical Engineering & Computer Science at Stanford. Space systems, embedded systems, research, and photography."
@@ -51,10 +51,6 @@
         aria-roledescription="carousel"
         aria-labelledby="art-gallery-label"
       >
-        <div class="art-gallery__intro container">
-          <h2 id="art-gallery-label" class="art-gallery__heading">Photo gallery</h2>
-          <p class="art-gallery__hint">Swipe or drag — campus work, builds, and experiments.</p>
-        </div>
 
         <div class="art-gallery__wrap">
           <button
@@ -147,33 +143,35 @@
 
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero__bg" aria-hidden="true"></div>
-        <div class="hero__inner container">
-          <p class="hero__eyebrow">Stanford · Mechanical Engineering &amp; Computer Science</p>
-          <h1 id="hero-title" class="hero__title">Eric Sun</h1>
-          <p class="hero__tagline">
-            Engineer. Tinkerer. Photographer. Building spacecraft structures, teaching code, and
-            shipping hardware that thinks at the edge.
-          </p>
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="#projects">See work</a>
+        <div class="hero__inner container hero__layout">
+          <div class="hero__text-column">
+            <div class="hero__intro">
+              <h1 id="hero-title" class="hero__title">Eric Sun</h1>
+              <p class="hero__tagline">Engineer. Tinkerer. Photographer.</p>
+            </div>
+            <div id="about" class="about__column hero__about" aria-label="About">
+              <p class="about__eyebrow">Stanford · Mechanical Engineering &amp; Computer Science</p>
+              <p class="lead">
+                I work across mechanical design, embedded systems, and software— from satellite
+                structures headed to orbit to autonomous systems that sense, decide, and act locally.
+                I also care about how engineering shows up in images: I have shot and exhibited
+                large-format campus work for Stanford Bioengineering.
+              </p>
+              <div class="about__actions">
+                <a class="btn btn--primary" href="#projects">See work</a>
+              </div>
+            </div>
           </div>
-          <ul class="hero__meta">
-            <li>Stanford Student Space Initiative</li>
-            <li>CS106A/B Section Leader</li>
-            <li>Stanford, CA</li>
-          </ul>
-        </div>
-      </section>
-
-      <section id="about" class="section section--alt" aria-labelledby="about-title">
-        <div class="container narrow">
-          <h2 id="about-title" class="section__title">About</h2>
-          <p class="lead">
-            I work across mechanical design, embedded systems, and software— from satellite
-            structures headed to orbit to autonomous systems that sense, decide, and act locally.
-            I also care about how engineering shows up in images: I have shot and exhibited
-            large-format campus work for Stanford Bioengineering.
-          </p>
+          <div class="hero__portrait">
+            <img
+              src="assets/images/profilepicCropped.jpg"
+              alt="Eric Sun"
+              width="320"
+              height="320"
+              class="hero__photo"
+              decoding="async"
+            />
+          </div>
         </div>
       </section>
 
@@ -509,13 +507,38 @@
                 </ul>
               </div>
             </article>
+
+            <article class="project-feature project-feature--reverse">
+              <div class="project-feature__media">
+                <figure class="media-frame media-frame--hero">
+                  <img
+                    src="assets/images/toolboxAndHammer.JPG"
+                    alt="Toolbox and hammer on a workbench"
+                    width="1200"
+                    height="750"
+                    class="media-frame__img"
+                  />
+                  <figcaption class="media-frame__caption">
+                    Toolbox and hammer setup in the shop.
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="project-feature__text">
+                <p class="eyebrow">Shop workflow · Fabrication</p>
+                <h3 class="project-feature__title">Toolbox and hammer build work</h3>
+                <p>
+                  A snapshot of day-to-day fabrication workflow: layout, tool prep, and hands-on
+                  assembly that supports the larger mechanical projects.
+                </p>
+              </div>
+            </article>
           </div>
         </div>
       </section>
 
       <section id="education" class="section" aria-labelledby="edu-title">
         <div class="container">
-          <h2 id="edu-title" class="section__title">Education &amp; credentials</h2>
+          <h2 id="edu-title" class="section__title">Education &amp; Credentials</h2>
           <div>
             <h3 class="subsection-title">Stanford University</h3>
             <ul class="plain-list">
@@ -528,8 +551,8 @@
             </ul>
             <h3 class="subsection-title">Certifications</h3>
             <ul class="plain-list">
-              <li>FAA TRUST (Recreational UAS) · Jul 2023</li>
               <li>AWS — Generative AI with Diffusion Models · Aug 2025</li>
+              <li>FAA TRUST (Recreational UAS) · Jul 2023</li>
             </ul>
           </div>
         </div>
