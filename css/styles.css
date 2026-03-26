@@ -559,6 +559,15 @@ code {
   padding: clamp(3.5rem, 8vw, 5rem) 0;
 }
 
+/* Reduce spacing between Education and Publications */
+#education.section {
+  padding-bottom: clamp(2.25rem, 6vw, 3.25rem);
+}
+
+#publications.section {
+  padding-top: clamp(2.25rem, 6vw, 3.25rem);
+}
+
 .section--alt {
   background: var(--bg-elevated);
   border-block: 1px solid var(--line);
@@ -614,9 +623,69 @@ code {
   margin-top: 0;
 }
 
+/* Education & Credentials: left/right columns */
+.education-credentials {
+  display: block;
+}
+
+.education-credentials__left,
+.education-credentials__right {
+  min-width: 0;
+}
+
+@media (min-width: 900px) {
+  .education-credentials {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 3rem;
+    align-items: start;
+  }
+}
+
 .muted {
   color: var(--text-muted);
   font-weight: 400;
+}
+
+/* Publications */
+.publication-entry {
+  margin: 0 0 1.25rem;
+}
+
+.publication-entry__title {
+  display: block;
+  font-weight: 700;
+  margin: 0 0 0.35rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.publication-entry__title:hover {
+  color: #9fd0ff;
+}
+
+.publication-entry__meta {
+  margin: 0 0 1.5rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* Poster presentations */
+.poster-entry {
+  margin: 0 0 1.25rem;
+}
+
+.poster-entry__title {
+  display: block;
+  font-weight: 700;
+  margin: 0 0 0.35rem;
+  color: var(--text);
+}
+
+.poster-entry__meta {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.95rem;
 }
 
 /* Timeline */
@@ -1033,6 +1102,11 @@ code {
   display: block;
   border-radius: 3px;
   object-fit: contain;
+}
+
+/* Footer icons: GitHub favicon is dark/orange and can be hard to read on dark bg */
+.footer__social-link[href^="https://github.com/"] .footer__icon {
+  filter: brightness(0) invert(1);
 }
 
 .footer__copy {
