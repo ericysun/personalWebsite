@@ -492,11 +492,24 @@ code {
 @media (max-width: 680px) {
   .hero__layout {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "portrait"
+      "text";
     gap: 1.1rem;
   }
 
   .hero__portrait {
+    grid-area: portrait;
     justify-self: start;
+    align-self: start;
+  }
+
+  .hero__text-column {
+    grid-area: text;
+  }
+
+  .hero__photo {
+    width: clamp(170px, 48vw, 280px);
   }
 }
 
@@ -770,6 +783,11 @@ code {
   align-items: start;
 }
 
+/* Prevent carousel media from overflowing grid columns on mobile */
+.project-feature__media {
+  min-width: 0;
+}
+
 @media (min-width: 900px) {
   .project-feature {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
@@ -801,6 +819,7 @@ code {
 
 .project-media-gallery__wrap {
   position: relative;
+  width: 100%;
 }
 
 .project-media-gallery__btn {
@@ -867,6 +886,7 @@ code {
 
 .project-media-gallery__viewport {
   display: flex;
+  width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
