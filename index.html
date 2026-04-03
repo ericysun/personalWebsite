@@ -794,18 +794,94 @@
 
             <article class="project-feature">
               <div class="project-feature__media">
-                <figure class="media-frame media-frame--hero">
-                  <img
-                    src="assets/images/toolboxAndHammer.JPG"
-                    alt="Toolbox and hammer on a workbench"
-                    width="1200"
-                    height="750"
-                    class="media-frame__img"
-                  />
-                  <figcaption class="media-frame__caption">
-                    Toolbox and hammer setup in the shop.
-                  </figcaption>
-                </figure>
+                <div class="project-media-gallery" data-project-gallery>
+                  <div class="project-media-gallery__wrap">
+                    <button
+                      type="button"
+                      class="project-media-gallery__btn project-media-gallery__btn--prev"
+                      aria-label="Previous slide"
+                      aria-controls="project-gallery-toolbox"
+                    >
+                      <span aria-hidden="true">‹</span>
+                    </button>
+                    <div
+                      id="project-gallery-toolbox"
+                      class="project-media-gallery__viewport"
+                      tabindex="0"
+                      role="group"
+                      aria-label="Toolbox and hammer photos"
+                    >
+                      <figure class="project-media-gallery__slide">
+                        <div class="project-media-gallery__visual">
+                          <img
+                            src="assets/images/toolboxAndHammer.JPG"
+                            alt="Toolbox and hammer on a workbench"
+                            width="1200"
+                            height="750"
+                            class="project-media-gallery__img"
+                          />
+                        </div>
+                        <figcaption class="project-media-gallery__cap">
+                          Toolbox and hammer setup in the shop.
+                        </figcaption>
+                      </figure>
+                      <figure class="project-media-gallery__slide">
+                        <div class="project-media-gallery__visual">
+                          <img
+                            src="assets/images/toolboxAndHammer2.jpg"
+                            alt="Toolbox and hammer build photo 2"
+                            width="1200"
+                            height="750"
+                            class="project-media-gallery__img"
+                          />
+                        </div>
+                        <figcaption class="project-media-gallery__cap">
+                          Cast Bronze Hammerhead Closeup, with CNC Engraved Text
+                        </figcaption>
+                      </figure>
+                      <figure class="project-media-gallery__slide">
+                        <div class="project-media-gallery__visual">
+                          <img
+                            src="assets/images/toolboxAndHammer3.JPG"
+                            alt="Toolbox and hammer build photo 3"
+                            width="1200"
+                            height="750"
+                            class="project-media-gallery__img"
+                          />
+                        </div>
+                        <figcaption class="project-media-gallery__cap">
+                          Disassembled Hammer: Steel Shaft & Plastic Endcaps Turned on Lathe, Hammerhead Sandcast, milled, and CNC Engraved Text
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <button
+                      type="button"
+                      class="project-media-gallery__btn project-media-gallery__btn--next"
+                      aria-label="Next slide"
+                      aria-controls="project-gallery-toolbox"
+                    >
+                      <span aria-hidden="true">›</span>
+                    </button>
+                  </div>
+                  <div class="project-media-gallery__dots" role="tablist" aria-label="Toolbox and hammer photos">
+                    <button
+                      type="button"
+                      class="project-media-gallery__dot is-active"
+                      aria-label="Show photo 1"
+                      aria-current="true"
+                    ></button>
+                    <button
+                      type="button"
+                      class="project-media-gallery__dot"
+                      aria-label="Show photo 2"
+                    ></button>
+                    <button
+                      type="button"
+                      class="project-media-gallery__dot"
+                      aria-label="Show photo 3"
+                    ></button>
+                  </div>
+                </div>
               </div>
               <div class="project-feature__text">
                 <p class="eyebrow">Foundry · Welding · Sand Casting · Lathe · Milling</p>
