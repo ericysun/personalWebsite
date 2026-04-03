@@ -340,4 +340,42 @@
       updateChrome();
     });
   })();
+
+  (function initUnavailablePosterModal() {
+    var modal = document.getElementById("poster-unavailable-modal");
+    if (!modal) return;
+    var openers = document.querySelectorAll("[data-open-poster-unavailable]");
+    var closers = modal.querySelectorAll("[data-modal-close]");
+    var okBtn = modal.querySelector(".modal__ok");
+    var lastFocus = null;
+
+    function openModal() {
+      lastFocus = document.activeElement;
+      modal.removeAttribute("hidden");
+      if (okBtn) okBtn.focus();
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeModal() {
+      modal.setAttribute("hidden", "");
+      document.body.style.overflow = "";
+      if (lastFocus && typeof lastFocus.focus === "function") {
+        lastFocus.focus();
+      }
+      lastFocus = null;
+    }
+
+    openers.forEach(function (btn) {
+      btn.addEventListener("click", openModal);
+    });
+    closers.forEach(function (el) {
+      el.addEventListener("click", closeModal);
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !modal.hasAttribute("hidden")) {
+        closeModal();
+      }
+    });
+  })();
 })();

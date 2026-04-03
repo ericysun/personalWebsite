@@ -926,16 +926,28 @@
           <h2 id="pub-title" class="section__title">Publications & Research</h2>
 
           <div class="publication-entry">
-            <span class="publication-entry__title"
-              >A Multiplexing Biosensor for Metabolite Monitoring via Molecular Dna Aptamer Probles functionalized to High-Q Metasurfaces</span
+            <button
+              type="button"
+              class="publication-entry__title publication-entry__title--action"
+              data-open-poster-unavailable
+              aria-haspopup="dialog"
+              aria-controls="poster-unavailable-modal"
             >
+              A Multiplexing Biosensor for Metabolite Monitoring via Molecular DNA Aptamer Probles functionalized to High-Q Metasurfaces
+            </button>
             <p class="publication-entry__meta">Stanford Material Science REU Poster Symposium · Aug 29, 2025</p>
           </div>
 
           <div class="publication-entry">
-            <span class="publication-entry__title"
-              >A Multiplexing Biosensor for Metabolite Monitoring via Molecular Dna Aptamer Probles functionalized to High-Q Metasurfaces</span
+            <button
+              type="button"
+              class="publication-entry__title publication-entry__title--action"
+              data-open-poster-unavailable
+              aria-haspopup="dialog"
+              aria-controls="poster-unavailable-modal"
             >
+              A Multiplexing Biosensor for Metabolite Monitoring via Molecular DNA Aptamer Probles functionalized to High-Q Metasurfaces
+            </button>
             <p class="publication-entry__meta">Stanford BioX Poster Symposium · Aug 28, 2025</p>
           </div>
           <div class="publication-entry">
@@ -945,19 +957,42 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              A damage-perceptive, self-healing electronic skin with millimeter resolution
+              A Damage-perceptive, Self-healing Electronic Skin with Millimeter Resolution
             </a>
-            <p class="publication-entry__meta">CellPress Device · Aug 15, 2025</p>
+            <p class="publication-entry__meta">CellPress Device · Volume 3, Issue 8 · Aug 15, 2025</p>
           </div>
           <div class="publication-entry">
-            <span class="publication-entry__title"
-              >A Damage-Sensing, Self-Healing Electronic Skin for Surgical Simulation Training</span
+            <a
+              class="publication-entry__title"
+              href="assets/images/ESkinBioXPoster.png"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-            <p class="publication-entry__meta">Stanford Biox Poster Symposium · Sept 1, 2023</p>
+              A Damage-Sensing, Self-Healing Electronic Skin for Surgical Simulation Training
+            </a>
+            <p class="publication-entry__meta">Stanford BioX Poster Symposium · Sept 1, 2023</p>
           </div>
         </div>
       </section>
     </main>
+
+    <div
+      id="poster-unavailable-modal"
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="poster-unavailable-heading"
+      hidden
+    >
+      <div class="modal__backdrop" data-modal-close aria-hidden="true"></div>
+      <div class="modal__panel">
+        <h3 id="poster-unavailable-heading" class="modal__title">Poster not available</h3>
+        <p class="modal__body">
+          This poster is currently not available for public view on the website. However, a paper is currently being worked on for this topic, and when that is published, it will be linked here.
+        </p>
+        <button type="button" class="btn btn--primary modal__ok" data-modal-close>OK</button>
+      </div>
+    </div>
 
     <footer class="site-footer">
       <div class="container footer__inner">

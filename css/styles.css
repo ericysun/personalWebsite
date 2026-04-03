@@ -677,10 +677,79 @@ code {
   color: #9fd0ff;
 }
 
+.publication-entry__title--action {
+  width: 100%;
+  max-width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+}
+
+.publication-entry__title--action:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
 .publication-entry__meta {
   margin: 0 0 1.5rem;
   color: var(--text-muted);
   font-size: 0.95rem;
+}
+
+/* Poster unavailable modal */
+.modal[hidden] {
+  display: none;
+}
+
+.modal:not([hidden]) {
+  display: grid;
+  place-items: center;
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  padding: 1.25rem;
+}
+
+.modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  cursor: pointer;
+}
+
+.modal__panel {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 28rem);
+  padding: 1.5rem 1.35rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: var(--bg-soft);
+  box-shadow: var(--shadow);
+}
+
+.modal__title {
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0 0 0.85rem;
+}
+
+.modal__body {
+  margin: 0 0 1.25rem;
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.modal__ok {
+  width: 100%;
 }
 
 /* Poster presentations */
