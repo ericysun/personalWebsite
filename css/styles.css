@@ -574,11 +574,12 @@ code {
 
 /* Reduce spacing between Education and Publications */
 #education.section {
-  padding-bottom: clamp(2.25rem, 6vw, 3.25rem);
+  padding-top: clamp(2.25rem, 6vw, 3.25rem);
+  padding-bottom: clamp(1.1rem, 3vw, 1.75rem);
 }
 
 #publications.section {
-  padding-top: clamp(2.25rem, 6vw, 3.25rem);
+  padding-top: clamp(1.1rem, 3vw, 1.75rem);
 }
 
 .section--alt {
