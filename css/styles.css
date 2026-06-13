@@ -136,11 +136,12 @@ code {
   position: relative;
   width: min(100% - 2.5rem, var(--max));
   margin-inline: auto;
+  overflow: hidden;
 }
 
 .art-gallery__viewport {
   display: flex;
-  overflow-x: auto;
+  overflow-x: scroll;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
@@ -150,6 +151,17 @@ code {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: #050608;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 20px;
+  margin-bottom: -20px;
+}
+
+.art-gallery__viewport::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+  background: transparent;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -160,19 +172,6 @@ code {
 
 .art-gallery__viewport:focus-visible {
   box-shadow: inset 0 0 0 2px var(--accent);
-}
-
-.art-gallery__viewport::-webkit-scrollbar {
-  height: 6px;
-}
-
-.art-gallery__viewport::-webkit-scrollbar-track {
-  background: var(--bg-soft);
-}
-
-.art-gallery__viewport::-webkit-scrollbar-thumb {
-  background: rgba(110, 184, 255, 0.35);
-  border-radius: 3px;
 }
 
 .art-gallery__slide {
@@ -922,6 +921,7 @@ code {
 .project-media-gallery__wrap {
   position: relative;
   width: 100%;
+  overflow: hidden;
 }
 
 .project-media-gallery__btn {
@@ -989,7 +989,7 @@ code {
 .project-media-gallery__viewport {
   display: flex;
   width: 100%;
-  overflow-x: auto;
+  overflow-x: hidden;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
