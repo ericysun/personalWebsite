@@ -1214,6 +1214,14 @@ code {
   text-align: center;
 }
 
+.footer__pixel-art {
+  display: block;
+  width: min(100%, 138px);
+  height: auto;
+  margin: 0 auto 1rem;
+  image-rendering: pixelated;
+}
+
 .footer__name {
   font-family: var(--font-display);
   font-weight: 400;
