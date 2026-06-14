@@ -1208,6 +1208,7 @@ code {
 .site-footer {
   padding: 2.5rem 0 2rem;
   border-top: 1px solid var(--line);
+  text-align: center;
 }
 
 .footer__inner {
@@ -1217,11 +1218,19 @@ code {
   text-align: center;
 }
 
+.footer__pixel-wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
 .footer__pixel-art {
   display: block;
-  width: min(100%, 138px);
+  width: 138px;
+  max-width: 100%;
   height: auto;
-  margin: 0 0 1rem;
+  margin-inline: auto;
   image-rendering: pixelated;
 }
 
