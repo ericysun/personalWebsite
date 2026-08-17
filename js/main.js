@@ -432,6 +432,40 @@
     });
   })();
 
+  (function initHeroPortraitSize() {
+    var textColumn = document.querySelector(".hero__text-column");
+    var photo = document.querySelector(".hero__photo");
+    var mq = window.matchMedia("(max-width: 680px)");
+    if (!textColumn || !photo) return;
+
+    function sync() {
+      if (mq.matches) {
+        photo.style.width = "";
+        photo.style.height = "";
+        return;
+      }
+      var size = textColumn.offsetHeight;
+      photo.style.width = size + "px";
+      photo.style.height = size + "px";
+    }
+
+    if (photo.complete) {
+      sync();
+    } else {
+      photo.addEventListener("load", sync, { once: true });
+    }
+
+    window.addEventListener("resize", function () {
+      requestAnimationFrame(sync);
+    });
+
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(sync);
+    }
+
+    mq.addEventListener("change", sync);
+  })();
+
   (function initUnavailablePosterModal() {
     var modal = document.getElementById("poster-unavailable-modal");
     if (!modal) return;
